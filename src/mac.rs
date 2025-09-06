@@ -1,6 +1,6 @@
 pub type MacAddress = [u8; 6];
 
-pub fn to_strin(mac: &MacAddress) -> String {
+pub fn to_string(mac: &MacAddress) -> String {
     mac.iter()
         .map(|byte| format!("{:02x}", byte))
         .collect::<Vec<_>>()
@@ -26,7 +26,7 @@ mod tests {
     #[test]
     fn test_to_string_valid() {
         let mac = [0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF] as MacAddress;
-        assert_eq!("aa:bb:cc:dd:ee:ff".to_owned(), to_strin(&mac));
+        assert_eq!("aa:bb:cc:dd:ee:ff".to_owned(), to_string(&mac));
     }
 
     #[test]

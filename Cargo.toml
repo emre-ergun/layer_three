@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 etherparse = "0.19"
+pcap-file='2.0.0'
